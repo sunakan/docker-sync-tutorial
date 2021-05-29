@@ -1,0 +1,13 @@
+---
+
+version: '2'
+
+services:
+  app:
+    image: busybox
+    working_dir: /var/local/app/
+    command: 'time dd if=/dev/zero of=speedtest bs=1024 count=102400'
+    volumes:
+      - type: bind
+        source: ./
+        target: /var/local/app/

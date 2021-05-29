@@ -1,0 +1,12 @@
+---
+
+services:
+  app:
+    volumes:
+      - type: volume
+        source: hoge-volume
+        target: /var/local/app/
+
+volumes:
+  hoge-volume:
+    external: true

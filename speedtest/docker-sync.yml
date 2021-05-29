@@ -1,0 +1,7 @@
+---
+
+version: '2'
+
+syncs:
+  hoge-volume:
+    src: '.'
