@@ -1,0 +1,16 @@
+# https://docker-sync.readthedocs.io/en/latest/getting-started/configuration.html#docker-compose-dev-yml
+---
+version: "2"
+services:
+  someapp:
+    volumes:
+      - fullexample-sync:/var/www:nocopy # nocopy is important
+  otherapp:
+    # thats the important thing
+    volumes:
+      - simpleexample-sync:/app/code:nocopy #  nocopy is important
+volumes:
+  fullexample-sync:
+    external: true
+  simpleexample-sync:
+    external: true
